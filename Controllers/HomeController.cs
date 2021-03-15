@@ -21,7 +21,7 @@ namespace Aplicacao.web.Controllers
 
         public IActionResult Index()
         {
-            return View(Dados.LISTA_CLIENTES);
+            return View(Dados.todos_os_dados());
         }
 
         public IActionResult novo_cliente()
@@ -33,8 +33,8 @@ namespace Aplicacao.web.Controllers
         [HttpPost]
         public IActionResult novo_cliente(Cliente item)
         {
-            //adicionar um novo cliente a lista
-            Dados.LISTA_CLIENTES.Add(item);
+            //pede ao model que adicone o novo cliente... caso seja possivel
+            Dados.adicionarCliente(item);
 
             return RedirectToAction("index");
         }
