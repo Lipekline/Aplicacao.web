@@ -1,0 +1,25 @@
+﻿@model IEnumerable<Aplicacao.web.Models.Cliente>
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1>Clientes</h1>
+    <hr />
+    <a asp-action="novo_cliente">Adicionar Clientes</a>
+    <hr />
+
+    @if (Model.Count() != 0)
+    {
+        @foreach (var item in Model)
+        {
+            <p>Nome: @item.nome | @item.telefone</p>
+
+        }
+        <p>Total de Clientes: @Model.Count() </p>
+    }
+    else
+    {
+        <p>Não existem clientes registrados</p>
+    }
+</div>

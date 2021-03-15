@@ -1,0 +1,10 @@
+﻿@model Aplicacao.web.Models.Cliente
+@*
+    For more information on enabling MVC for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
+*@
+
+<form asp-controller="Home" asp-action="novo_cliente" method="post">
+    Nome: <input asp-for="nome" /> <br />
+    Telefone: <input asp-for="telefone" />
+    <button type="submit"> Salvar </button>
+</form>
