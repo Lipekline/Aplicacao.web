@@ -13,7 +13,7 @@
     {
         @foreach (var item in Model)
         {
-            <p>Nome: @item.nome | @item.telefone</p>
+            <p>Nome: @item.nome | Email: @item.email | <a asp-controller="home" asp-action="deletar" asp-route-id="@item.id">Deletar</a></p>
 
         }
         <p>Total de Clientes: @Model.Count() </p>

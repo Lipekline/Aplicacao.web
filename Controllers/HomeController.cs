@@ -39,6 +39,14 @@ namespace Aplicacao.web.Controllers
             return RedirectToAction("index");
         }
 
+        public IActionResult deletar(int id)
+        {
+            //pedir ao model que delete o registro desejado apartir do id
+            Dados.deletarCliente(id);
+
+            return RedirectToAction("index");
+        }
+
         public IActionResult Privacy()
         {
             return View();
